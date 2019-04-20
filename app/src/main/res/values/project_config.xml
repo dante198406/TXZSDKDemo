@@ -1,9 +1,11 @@
 <resources>
 
-    <string name="txz_sdk_init_app_id">appId</string>
-    <string name="txz_sdk_init_app_token">appToken</string>
+    <!-- <string name="txz_sdk_init_app_id">6c3cc1b9603d0c6c949c427df30c473f</string>
+    <string name="txz_sdk_init_app_token">6e1771c22f2c685ce647cbcd628ad5d4352f9bc2</string> -->
+    <string name="txz_sdk_init_app_id">b2fdfe2a01621283ba43269b36508fb2</string>
+    <string name="txz_sdk_init_app_token">481af974de4ddf44674acf6c0aca1f9dc1f23ef2</string>
     <string-array name="txz_sdk_init_wakeup_keywords">
-        <item>你好小踢</item>
+        <item>你好悠悠</item>
     </string-array>
 
 </resources>
