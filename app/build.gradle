@@ -32,5 +32,5 @@ android {
 dependencies {
     compile 'com.android.support:appcompat-v7:25.+'
     compile files('libs/TXZ_SDK.jar')
-    compile files('libs/gson-2.2.4.jar')
+    //compile files('libs/gson-2.2.4.jar')
 }
