@@ -1,0 +1,98 @@
+<resources>
+
+    <string name="app_name">TXZSDKDemo</string>
+    <string name="back">返回</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="defaultName">defaultName</string>
+    <string name="call_disable_reason">很抱歉，蓝牙断开了，电话不可用</string>
+    <string name="button_text_i_know">我知道了</string>
+    
+    <string name="common_control">设置</string>
+     <!-- setting -->
+    <string name="default_hint_edit_wakeup_word">请输入昵称</string>
+    <string name="edit_wakeupword_tip_1">1、只支持汉字，不支持英文字母、阿拉伯数字。最好给我取个四个字的昵称，这样我会比较灵敏的。</string>
+    <string name="edit_wakeupword_tip_2">2、昵称最好别是一样的字，一样的发音，否则我有时候会乱跳出来的。</string>
+    <string name="edit_wakeupword_tip_3">3、如果使用多个唤醒词，中间使用中文的“，”分隔开。</string>
+    <string name="wakeup_word_new">唤醒词已修改为：</string>
+    
+    <string name="wakeup_word_default">你好魔方</string>
+    <string name="setting_title_wakeup">语音唤醒</string>
+    <string name="setting_wakeup_status_closed">已关闭</string>
+    <string name="setting_title_map_choose">地图选择</string>
+    <string name="setting_map_choose_gaode">高德</string>
+    <string name="setting_map_choose_baidu">百度</string>
+    <string name="setting_map_choose_tuba">图吧</string>
+    <string name="setting_map_choose_daodaotong">道道通</string>
+    <string name="setting_title_tts_speed">播报速度</string>
+    <string name="setting_tts_speed_slowly">较慢</string>
+    <string name="setting_tts_speed_standard">标准</string>
+    <string name="setting_tts_speed_fast">较快</string>
+    <string name="setting_title_float_mic">悬浮麦克风</string>
+    <string name="setting_float_mic_open">已打开</string>
+    <string name="setting_float_mic_closed">已关闭</string>
+    <string name="setting_weather_forecast">播报天气</string>
+    <string name="setting_weather_open">已打开</string>
+    <string name="setting_weather_closed">已关闭</string>
+    <string name="setting_title_oneshot">OneShot</string>
+    <string name="setting_title_oneshot_hint">如“%1$s,打开蓝牙”</string>
+    
+    <string name="setting_title_version_mode">对话模式</string>
+    <string name="setting_version_mode_exp">体验</string>
+    <string name="setting_version_mode_standard">经典</string>
+    <string name="setting_version_mode_high">高阶</string>
+    <string name="setting_status_version_mode_exp">体验模式</string>
+    <string name="setting_status_version_mode_standard">经典模式</string>
+    <string name="setting_status_version_mode_high">高阶模式</string>
+    
+    <string name="setting_title_tts_timbre">语音包</string>
+    <string name="setting_tts_timbre_standard">标准女声</string>
+    <string name="setting_tts_timbre_sexy">性感御姐</string>
+    <string name="setting_help_text_loading">正在切换&#8230;</string>
+    
+    <string name="setting_title_aec">播报打断</string>
+    <string name="setting_title_aec_hint">在语音播报时,可打断</string>
+    <string name="setting_title_addr_favorite">地址收藏夹</string>
+    <string name="setting_title_ota">版本升级</string>
+    <string name="setting_ota_text_version">UniDrive\t%1$s</string>
+    <string name="setting_ota_text_newest_version">当前为最新版本。</string>
+    <string name="setting_title_about_us">关于我们</string>
+    <string name="setting_title_more">更多</string>
+
+    <string name="setting_help_text_wakeup">说固定的语音口令，可以唤醒呼出语音系统，进行语音操作。点击“铅笔”图标可以修改唤醒名字。</string>
+    <string name="setting_help_text_float_mic">开启后，主界面和其它应用程序界面会显示一个圆形麦克风图标，点击可以开启语音操作。</string>
+    <string name="setting_help_text_weather">开启后，每次开机后会自动播报天气信息。</string>
+    <string name="setting_help_text_oneshot">唤醒词+命令，一句话唤醒语音系统，同时执行相应的命令。例子：在语音系统休眠状态下， 说“%1$s，查找附近的加油站”，就可以快速实现周边查询。</string>
+    <string name="setting_help_text_aec">当输入的语音指令识别后，语音合成（TTS）会回复相应的反馈。开启后，可说当前支持的命令（如“第一个”），来中断当前的TTS，直接执行下一步骤，提高操作效率。</string>
+    
+    <string name="setting_help_title_version_mode_1">体验模式（不推荐）</string>
+    <string name="setting_help_text_version_mode_1">当会话流程结束后，会自动开启录音。此模式适用于体验和尝试语音的各功能，不推荐实际驾驶时使用。</string>
+    <string name="setting_help_title_version_mode_2">经典模式（默认）</string>
+    <string name="setting_help_text_version_mode_2">每次会话，都需要先开启语音系统（说唤醒口令或者点击话筒图标），才能输入语音指令。</string>
+    <string name="setting_help_title_version_mode_3">高阶模式</string>
+    <string name="setting_help_text_version_mode_3">唤醒词+命令，一句话唤醒语音系统，同时执行相应的命令。如：“%1$s，查找附近的加油站”，就可以快速实现周边查询。</string>
+
+    <string name="text_go_home">回家</string>
+    <string name="text_go_company">回公司</string>
+    <string name="text_no_address_added">未添加地址</string>
+    <string name="default_hint_added_address">请输入目的地，如“市政府”</string>
+    <string name="searching">正在搜索&#8230;</string>
+    <string name="text_search_location_no_address">暂无相应信息</string>
+    <string name="error_msg_search_poi_no_network">无网络，请联网后再试。</string>
+    <string name="error_msg_search_poi_timeout">网络好像不给力！</string>
+    <string name="error_msg_search_poi_no_result">找不到该目的地，请换一个地址试试。</string>
+    
+    <string name="loading_wakeup_text">修改中...</string>
+    <string name="location_change_default_hint">请输入地址</string>
+    <string name="location_search_default_hint_route">请输入目的地，如“市政府”</string>
+    <string name="location_search_default_hint_localsearch">请说周边类别的名称</string>
+    
+    <string name="weather_header">今天天气情况是：%1$s，</string>
+    <string name="weather_temperature">%1$d到%2$d℃，</string>
+    <string name="period">。</string>
+    <string name="to">到</string>
+    <string name="turn">转</string>
+    <string name="weather_pm25_value">pm2.5指数为%1$s。</string>
+    <string name="weather_air_quality_value">空气质量：%1$s。</string>
+    <string name="weather_car_wash_value">洗车指数：%1$s。</string>
+</resources>

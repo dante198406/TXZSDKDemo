@@ -14,6 +14,17 @@ android {
         //multiDexEnabled true
     }
 
+    sourceSets {
+        main {
+            //manifest.srcFile 'src/main/AndroidManifest.xml'
+            //java.srcDirs = ['src/main/java', 'src/main/aidl']
+            //resources.srcDirs = ['src/main/java', 'src/main/aidl']
+            aidl.srcDirs = ['src/main/java/com/erobbing/voice/service/aidl']
+            //res.srcDirs = ['src/main/res']
+            //assets.srcDirs = ['src/main/assets']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false

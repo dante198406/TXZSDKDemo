@@ -29,10 +29,8 @@ public class PowerActivity extends BaseActivity {
 				TXZPowerManager.getInstance().reinitTXZ(new Runnable() {
 					@Override
 					public void run() {
-						TXZPowerManager
-								.getInstance()
-								.notifyPowerAction(
-										TXZPowerManager.PowerAction.POWER_ACTION_WAKEUP);
+						TXZPowerManager.getInstance().notifyPowerAction(
+								TXZPowerManager.PowerAction.POWER_ACTION_WAKEUP);
 
 						DebugUtil.showTips("重新初始化同行者完成");
 					}
@@ -40,16 +38,16 @@ public class PowerActivity extends BaseActivity {
 
 				DebugUtil.showTips("正在重新初始化同行者");
 			}
-		}), new DemoButton(this, "震动唤醒", new OnClickListener() {
+		})
+		//zhouyuhuan modify:20160613
+		, new DemoButton(this, "震动唤醒", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				TXZPowerManager.getInstance().reinitTXZ(new Runnable() {
 					@Override
 					public void run() {
-						TXZPowerManager
-								.getInstance()
-								.notifyPowerAction(
-										TXZPowerManager.PowerAction.POWER_ACTION_SHOCK_WAKEUP);
+						TXZPowerManager.getInstance().notifyPowerAction(
+								TXZPowerManager.PowerAction.POWER_ACTION_SHOCK_WAKEUP);
 
 						DebugUtil.showTips("重新初始化同行者完成");
 					}

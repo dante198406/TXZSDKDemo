@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_f1">36dp</dimen>
+    <dimen name="text_size_f2">24dp</dimen>
+    <dimen name="text_size_f3">20dp</dimen>
+    <dimen name="text_size_f4">16dp</dimen>
+    <dimen name="text_size_f5">12dp</dimen>
+    <dimen name="text_size_f6">9dp</dimen>
+    
+     <dimen name="main_page_banner_hight">106dp</dimen>
+    <dimen name="mainview_setting_icon">55dp</dimen>
+    <dimen name="main_icon_margin_left">14dp</dimen>
+    <dimen name="main_icon_margin_right">14dp</dimen>
+    
+    <dimen name="second_page_banner_height">55dp</dimen>
+    <dimen name="bottom_indicator_height">32dp</dimen>
+ 	<dimen name="title_setting_margin">4dp</dimen>
+ 	
+ 	<dimen name="setting_page1_title_margin_top">12dp</dimen>
+    <dimen name="setting_page1_status_text_margin_top">4dp</dimen>
+    <dimen name="setting_page1_status_image_margin_top">16dp</dimen>
+    <dimen name="height_setting_status_text">32dp</dimen>
+ 	
+    <dimen name="session_button_hight">50dp</dimen>
+</resources>

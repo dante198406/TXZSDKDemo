@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#0099CC</color>
+    <color name="dark_blue">#003567</color>
+    <color name="black">#000000</color>
+    <color name="brown">#3D3D3D</color>
+    <color name="grey">#777777</color>
+    <color name="red">#CC0000</color>
+    <color name="gren">#669900</color>
+    <color name="light_grey">#CCCCCC</color>
+    <color name="grey_white">#F6F6F6</color>
+    <color name="menu_item_pressed">#2B2B2B</color>
+    <color name="menu_divider">#404040</color>
+    <color name="main_page_background">#FF181C26</color>
+    <color name="color_wakeup_word">#00a8ff</color>
+    <color name="color_text_tips">#7291b7</color>
+    <color name="color_text_link">#7291b7</color>
+    <color name="color_session_item_number">#FFFFFF</color>
+    <color name="color_main_auto_help_text">#B2B2B2</color>
+    <color name="session_page_background">#a0020C19</color>
+    
+</resources>

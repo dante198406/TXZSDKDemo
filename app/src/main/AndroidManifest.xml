@@ -95,6 +95,27 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </service>
+        <service android:name="com.txznet.sdkdemo.SDKDemoService" >
+            <intent-filter>
+                <action android:name="com.erobbing.voice.service.aidl" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.erobbing.voice.weather.WeatherInfoService" >
+        </service>
+
+        <receiver android:name="com.erobbing.voice.phone.AndroidCallStateReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <!-- <action android:name="android.intent.action.PHONE_STATE" /> -->
+
+                <action android:name="android.bluetooth.headsetclient.profile.action.AG_CALL_CHANGED" />
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.bluetooth.a2dpsink.profile.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.headsetclient.profile.action.CONNECTION_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

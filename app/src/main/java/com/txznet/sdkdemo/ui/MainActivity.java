@@ -83,16 +83,13 @@ public class MainActivity extends BaseActivity {
 			public void onClick(View v) {
 				startDemoModule(((DemoButton) v).getText(), PowerActivity.class);
 			}
-		}), new DemoButton(this, "系统对接", new OnClickListener() {
+		}),
+		
+		new DemoButton(this, "资源修改", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startDemoModule(((DemoButton) v).getText(),
-						SystemActivity.class);
-			}
-		}), new DemoButton(this, "场景对接", new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				startDemoModule(((DemoButton) v).getText(), SenceActivity.class);
+						ResourceActivity.class);
 			}
 		}));
 
@@ -102,11 +99,23 @@ public class MainActivity extends BaseActivity {
 				startDemoModule(((DemoButton) v).getText(),
 						StatusActivity.class);
 			}
-		}), new DemoButton(this, "资源修改", new OnClickListener() {
+		}),new DemoButton(this, "场景对接", new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startDemoModule(((DemoButton) v).getText(), SenceActivity.class);
+			}
+		}),new DemoButton(this, "微信对接", new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startDemoModule(((DemoButton) v).getText(), SceneActivity.class);
+			}
+		})
+		//zhouyuhuan modify :20160613
+		,new DemoButton(this, "系统对接", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startDemoModule(((DemoButton) v).getText(),
-						ResourceActivity.class);
+						SystemActivity.class);
 			}
 		}));
 	}

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.erobbing.voice.phone.AndroidCallTool;
 import com.txznet.sdk.TXZCallManager;
 import com.txznet.sdk.TXZCallManager.CallTool;
 import com.txznet.sdk.TXZCallManager.CallToolStatusListener;
@@ -68,8 +69,8 @@ public class CallActivity extends BaseActivity {
 		addDemoButtons(new DemoButton(this, "模拟电话工具", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				TXZCallManager.getInstance().setCallTool(mCallTool);
-				
+				//TXZCallManager.getInstance().setCallTool(mCallTool);
+				TXZCallManager.getInstance().setCallTool(new AndroidCallTool());
 				DebugUtil.showTips("已启用模拟电话工具");
 			}
 		}), new DemoButton(this, "取消电话工具", new OnClickListener() {
@@ -85,44 +86,50 @@ public class CallActivity extends BaseActivity {
 		addDemoButtons(new DemoButton(this, "去电状态", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (mCallToolStatusListener != null) {
+				/*if (mCallToolStatusListener != null) {
 					Contact con = new Contact();
 					con.setName("张三");
 					con.setNumber("10086");
 					mCallToolStatusListener.onMakeCall(con);
-				}
-				
+				}*/
+				Contact con = new Contact();
+				con.setName("张三");
+				con.setNumber("10086");
+				AndroidCallTool.getInstance().onMakeCall(con);
 				DebugUtil.showTips("已模拟去电状态");
 			}
 		}), new DemoButton(this, "来电状态", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (mCallToolStatusListener != null) {
+				/*if (mCallToolStatusListener != null) {
 					Contact con = new Contact();
 					con.setName("张三");
 					con.setNumber("10086");
 					mCallToolStatusListener.onIncoming(con,
-							true/* 是否tts播报来电信息 */, true/* 是否启动声控识别接听拒接 */);
-				}
-				
+							true 是否tts播报来电信息 , true 是否启动声控识别接听拒接 );
+				}*/
+				Contact con = new Contact();
+				con.setName("张三");
+				con.setNumber("10086");
+				AndroidCallTool.getInstance().onIncoming(con);
 				DebugUtil.showTips("已模拟来电状态");
 			}
 		}), new DemoButton(this, "空闲状态", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (mCallToolStatusListener != null) {
+				/*if (mCallToolStatusListener != null) {
 					mCallToolStatusListener.onIdle();
-				}
-				
+				}*/
+				AndroidCallTool.getInstance().onIdle();
 				DebugUtil.showTips("已模拟空闲状态");
 			}
 		}), new DemoButton(this, "接通状态", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (mCallToolStatusListener != null) {
+				/*if (mCallToolStatusListener != null) {
 					mCallToolStatusListener.onOffhook();
-				}
-				
+				}*/
+				AndroidCallTool.getInstance().onOffhook();
 				DebugUtil.showTips("已模拟接通状态");
 			}
 		}));
@@ -135,20 +142,20 @@ public class CallActivity extends BaseActivity {
 		}), new DemoButton(this, "蓝牙连上状态", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (mCallToolStatusListener != null) {
+				/*if (mCallToolStatusListener != null) {
 					mCallToolStatusListener.onEnabled();
-				}
-				
+				}*/
+				AndroidCallTool.getInstance().onEnabled();
 				DebugUtil.showTips("已模拟连接状态");
 			}
 		}), new DemoButton(this, "蓝牙断开状态", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (mCallToolStatusListener != null) {
+				/*if (mCallToolStatusListener != null) {
 					mCallToolStatusListener
-							.onDisabled("很抱歉，蓝牙断开了，电话不可用了"/* 这里的提示会直接交互展示给用户 */);
-				}
-				
+							.onDisabled("很抱歉，蓝牙断开了，电话不可用了" 这里的提示会直接交互展示给用户 );
+				}*/
+				AndroidCallTool.getInstance().onDisabled("很抱歉，蓝牙断开了，电话不可用了");
 				DebugUtil.showTips("已模拟断开状态");
 			}
 		}));
@@ -172,81 +179,16 @@ public class CallActivity extends BaseActivity {
 		con.setName("张三");
 		con.setNumber("30002");
 		lst.add(con);
-		con = new Contact();
-		con.setName("张三");
-		con.setNumber("30003");
-		lst.add(con);
-		con = new Contact();
-		con.setName("章三");
-		con.setNumber("30100");
-		lst.add(con);
-		con = new Contact();
-		con.setName("張三");
-		con.setNumber("30200");
-		lst.add(con);
-		con = new Contact();
-		con.setName("李四");
-		con.setNumber("40000");
-		lst.add(con);
-		con = new Contact();
-		con.setName("杨总-腾讯");
-		con.setNumber("40001");
-		lst.add(con);
-		con = new Contact();
-		con.setName("杨总-华为");
-		con.setNumber("40002");
-		lst.add(con);
-		con = new Contact();
-		con.setName("杨总-百度");
-		con.setNumber("40003");
-		lst.add(con);
-		con = new Contact();
-		con.setName("曾茜");
-		con.setNumber("40001");
-		lst.add(con);
-		con = new Contact();
-		con.setName("层倩");
-		con.setNumber("40002");
-		lst.add(con);
-		con = new Contact();
-		con.setName("层希");
-		con.setNumber("40003");
-		lst.add(con);
-		con = new Contact();
-		con.setName("增倩");
-		con.setNumber("40004");
-		lst.add(con);
-		con = new Contact();
-		con.setName("增希");
-		con.setNumber("40005");
-		lst.add(con);
-		con = new Contact();
-		con.setName("号码测试");
-		con.setNumber("15361088570");
-		lst.add(con);
-		con = new Contact();
-		con.setName("号码测试");
-		con.setNumber("5678");
-		lst.add(con);
-		con = new Contact();
-		con.setName("号码测试");
-		con.setNumber("075588888888");
-		lst.add(con);
-		con = new Contact();
-		con.setName("归属地运营商");
-		con.setNumber("15361088570");
-		lst.add(con);
-		con = new Contact();
-		con.setName("归属地运营商");
-		con.setNumber("15334565678");
-		lst.add(con);
-		con = new Contact();
-		con.setName("归属地运营商");
-		con.setNumber("18612997778");
-		lst.add(con);
+		
 		TXZCallManager.getInstance().syncContacts(lst);
 		
 		DebugUtil.showTips("已同步联系人：张三、李四、曾茜、杨总、号码测试、归属地运营商");
 	}
-
+	/**
+	 * zhouyuhuan add : init call 20160623
+	 */
+	public static void regInitCall() {
+		TXZCallManager txzCallManager = TXZCallManager.getInstance();
+		txzCallManager.setCallTool(new AndroidCallTool());
+	}
 }

@@ -30,7 +30,7 @@ public class ResourceActivity extends BaseActivity {
 				DebugUtil.showTips("已还原录音窗口");
 			}
 		}));
-
+		//zhouyuhuan modify:20160613
 		addDemoButtons(new DemoButton(this, "替换提示语", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -105,6 +105,28 @@ public class ResourceActivity extends BaseActivity {
 		@Override
 		public void close() {
 			DebugUtil.showTips("关闭录音窗口");
+		}
+		
+		@Override
+		public void showAudioChoice(String data) {
+			DebugUtil.showTips("显示音频选择数据：" + data);
+		}
+
+		@Override
+		public void showWxContactChoice(String data) {
+			DebugUtil.showTips("显示微信联系人选择数据：" + data);
+		}
+
+		@Override
+		public void snapPager(boolean arg0) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void showListChoice(int arg0, String arg1) {
+			// TODO Auto-generated method stub
+
 		}
 	};
 }

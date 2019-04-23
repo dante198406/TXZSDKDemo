@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.txznet.sdk.TXZNavManager;
 import com.txznet.sdk.TXZNavManager.NavTool;
+import com.txznet.sdk.TXZNavManager.NavToolStatusHighListener;
 import com.txznet.sdk.TXZNavManager.NavToolStatusListener;
 import com.txznet.sdk.TXZNavManager.NavToolType;
 import com.txznet.sdk.bean.Poi;
@@ -59,7 +60,8 @@ public class NavActivity extends BaseActivity {
 				
 				DebugUtil.showTips("已将默认声控导航设置为：" + ((Button)v).getText());
 			}
-		}), new DemoButton(this, "百度导航HD", new OnClickListener() {
+		}));
+		addDemoButtons(new DemoButton(this, "百度导航HD", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				TXZNavManager.getInstance().setNavTool(
@@ -67,8 +69,7 @@ public class NavActivity extends BaseActivity {
 				
 				DebugUtil.showTips("已将默认声控导航设置为：" + ((Button)v).getText());
 			}
-		}));
-		addDemoButtons(new DemoButton(this, "高德地图", new OnClickListener() {
+		}), new DemoButton(this, "高德地图", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				TXZNavManager.getInstance().setNavTool(
@@ -84,7 +85,8 @@ public class NavActivity extends BaseActivity {
 				
 				DebugUtil.showTips("已将默认声控导航设置为：" + ((Button)v).getText());
 			}
-		}), new DemoButton(this, "高德车机版", new OnClickListener() {
+		}));
+		addDemoButtons(new DemoButton(this, "高德车机版", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				TXZNavManager.getInstance().setNavTool(
@@ -101,7 +103,6 @@ public class NavActivity extends BaseActivity {
 				DebugUtil.showTips("已将默认声控导航设置为：" + ((Button)v).getText());
 			}
 		}));
-
 		addDemoButtons(new DemoButton(this, "回到导航", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -132,7 +133,9 @@ public class NavActivity extends BaseActivity {
 				
 				DebugUtil.showTips(((Button)v).getText());
 			}
-		}), new DemoButton(this, "导航到指定位置", new OnClickListener() {
+		})
+		//zhouyuhuan add:20160613
+		, new DemoButton(this, "导航到指定位置", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Poi poi = new Poi();
@@ -188,6 +191,30 @@ public class NavActivity extends BaseActivity {
 		public void enterNav() {
 			// TODO 返回导航，在isNav返回true时回到原来的导航界面
 			DebugUtil.showTips("回到导航");
+		}
+
+		@Override
+		public void setCompanyLoc(Poi arg0) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void setHomeLoc(Poi arg0) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void setStatusListener(NavToolStatusHighListener arg0) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void speakLimitSpeed() {
+			// TODO Auto-generated method stub
+
 		}
 	};
 

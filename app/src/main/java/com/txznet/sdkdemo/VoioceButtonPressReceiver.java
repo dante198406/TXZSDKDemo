@@ -15,6 +15,7 @@ public class VoioceButtonPressReceiver extends BroadcastReceiver {
         mContext = context;
         if (VOICE_BUTTON_PRESS_ACTION.equals(intent.getAction())) {
             TXZAsrManager.getInstance().triggerRecordButton();
+            //TXZAsrManager.getInstance().start();//启动不了
         }
 
         if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {

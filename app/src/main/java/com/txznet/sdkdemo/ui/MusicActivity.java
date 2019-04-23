@@ -1,5 +1,8 @@
 package com.txznet.sdkdemo.ui;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -92,6 +95,34 @@ public class MusicActivity extends BaseActivity {
 			public void onClick(View v) {
 				TXZMusicManager.getInstance().next();
 				
+				DebugUtil.showTips(((Button)v).getText());
+			}
+		}));
+		//zhouyuhuan modify :20160613
+		addDemoButtons(new DemoButton(this, "额外音乐列表", new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				MusicModel model = new MusicModel();
+				model.setTitle("测试歌曲");
+				model.setArtist(new String[]{"测试歌手"});
+				//设置一个存在的路径测试
+				model.setPath("/system/lib/libc.so");
+				List<MusicModel> lst =new ArrayList<MusicModel>();
+				lst.add(model);
+				TXZMusicManager.getInstance().syncExMuicList(lst);
+				DebugUtil.showTips(((Button)v).getText());
+			}
+		}), new DemoButton(this, "覆盖音乐列表", new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				MusicModel model = new MusicModel();
+				model.setTitle("测试节目");
+				model.setArtist(new String[]{"测试艺术家"});
+				//设置一个存在的路径测试
+				model.setPath("/system/lib/libz.so");
+				List<MusicModel> lst =new ArrayList<MusicModel>();
+				lst.add(model);
+				TXZMusicManager.getInstance().syncMuicList(lst);
 				DebugUtil.showTips(((Button)v).getText());
 			}
 		}));
@@ -191,6 +222,11 @@ public class MusicActivity extends BaseActivity {
 		@Override
 		public void exit() {
 			DebugUtil.showTips("退出音乐");
+		}
+
+		@Override
+		public void continuePlay() {
+			// TODO Auto-generated method stub
 		}
 	};
 
